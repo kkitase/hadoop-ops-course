@@ -19,8 +19,9 @@ echo '192.168.199.3 node2.example.com' >> /etc/hosts
 echo '192.168.199.4 node3.example.com' >> /etc/hosts
 
 # replace localhost in node1
-cat /etc/ambari-agent/conf/ambari-agent.ini |sed 's/localhost/node1.example.com/g' > /etc/ambari-agent/conf/ambari-agent.ini.new
-mv -f /etc/ambari-agent/conf/ambari-agent.ini.new /etc/ambari-agent/conf/ambari-agent.ini
+# cat /etc/ambari-agent/conf/ambari-agent.ini |sed 's/localhost/node1.example.com/g' > /etc/ambari-agent/conf/ambari-agent.ini.new
+# mv -f /etc/ambari-agent/conf/ambari-agent.ini.new /etc/ambari-agent/conf/ambari-agent.ini
+cat /etc/ambari-agent/conf/ambari-agent.ini |sed 's/localhost/hdp1.handson.jp/pg'
 
 # start ambari-agent
 ambari-agent start
